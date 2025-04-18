@@ -5,12 +5,6 @@
     box-sizing: border-box;
 }
 
-/* Asegura que no haya scroll lateral */
-html, body {
-    overflow-x: hidden;
-    max-width: 100%;
-}
-
 /* Estilo global */
 body {
     font-family: 'Fira Code', monospace;
@@ -93,10 +87,22 @@ nav {
     transform: rotate(-45deg) translateY(-8px);
 }
 
-/* Menú desplegable en dispositivos móviles */
+/* Estilos responsive */
 @media (max-width: 768px) {
     nav {
-        padding: 15px 20px; /* Ajuste para que no desborde */
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .logo-text {
+        font-size: 16px;
+    }
+
+    .logo-container img {
+        height: 30px;
     }
 
     .nav-links {
@@ -106,20 +112,25 @@ nav {
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        width: 100%;
+        width: 100vw;
         background-color: white;
         padding: 0;
         transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.3s ease;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
     }
 
     .nav-links.active {
-        max-height: 500px;
+        max-height: 300px;
         opacity: 1;
         padding: 20px 0;
     }
 
     .menu-toggle {
         display: flex;
+        margin-left: auto;
     }
 }
 
@@ -127,25 +138,25 @@ nav {
 #contacto {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centrado horizontal */
-    align-items: center;     /* Centrado vertical */
-    height: 100%;            /* Ocupa toda la altura disponible */
-    padding: 20px;           /* Espaciado en la sección */
-    background-color: #f4f4f4; /* Fondo suave */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    background-color: #f4f4f4;
 }
 
-/* Estilo para el contenedor de contacto */
+/* Contenedor de contacto */
 .contact-container {
-    text-align: left;  /* Alinea el texto a la izquierda dentro del contenedor */
+    text-align: left;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;      /* Ocupa el 100% del espacio */
-    max-width: 600px; /* Maxima anchura para el contenedor */
+    width: 100%;
+    max-width: 600px;
 }
 
-/* Estilo de los títulos */
+/* Títulos */
 #contacto h1 {
     color: #b41e1e;
     font-size: 24px;
@@ -162,14 +173,14 @@ nav {
     text-decoration: underline;
 }
 
-/* Estilos para el mapa dentro del contenedor de contacto */
+/* Mapa */
 .map-container {
-    margin-top: 20px; /* Espacio entre la información de contacto y el mapa */
+    margin-top: 20px;
 }
 
 .map-container iframe {
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    width: 100%; /* Hace que el mapa ocupe el 100% del contenedor */
-    height: 300px; /* Altura del mapa */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 300px;
 }
