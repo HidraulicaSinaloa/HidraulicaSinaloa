@@ -324,3 +324,15 @@ footer {
     width: 100%; /* Hace que el mapa ocupe el 100% del contenedor */
     height: 300px; /* Altura del mapa */
 }
+
+@media (max-width: 768px) {
+    /* Reducir tamaño del logo */
+    .logo-container img {
+        height: 30px; /* Más pequeño aún que el ajuste anterior */
+    }
+
+    /* Reducir el tamaño del texto del nombre */
+    .logo-text {
+        font-size: 18px;
+    }
+}
