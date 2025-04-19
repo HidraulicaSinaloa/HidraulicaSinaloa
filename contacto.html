@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hidráulica de Sinaloa ofrece soluciones hidráulicas profesionales en Culiacán.">
     <title>Contacto - Hidráulica de Sinaloa</title>
     <link rel="stylesheet" href="a.css">
+    <link rel="icon" href="img/logo.jpeg" type="image/jpeg">
 </head>
 <body>
     <nav>
@@ -33,7 +35,7 @@
         <div class="contact-container">
             <h1>Contacto</h1>
 
-            <p><strong>Gerente:</strong> Froylan Uri</p>
+            <p><strong>Gerente:</strong> Froylan Lugo</p>
 
             <p><strong>Email:</strong> <span class="subrayado">froylanlugo@hotmail.com</span></p>
 
@@ -56,6 +58,17 @@
             navLinks.classList.toggle('active');
             menuToggle.classList.toggle('active');
         }
+    
+        // Cierra el menú cuando se hace clic en un enlace (opcional pero útil en móvil)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+                document.querySelector('.menu-toggle').classList.remove('active');
+            });
+        });
     </script>
+    <footer>
+        <p>© 2025 Hidráulica de Sinaloa. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>

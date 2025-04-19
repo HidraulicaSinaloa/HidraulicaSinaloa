@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hidráulica de Sinaloa ofrece soluciones hidráulicas profesionales en Culiacán.">
     <title>Hidráulica de Sinaloa</title>
     <link rel="stylesheet" href="a.css">
+    <link rel="icon" href="img/logo.jpeg" type="image/jpeg">
 </head>
 <body>
     <nav>
@@ -28,13 +30,55 @@
         </ul>
     </nav>
 
+    <!-- Sección Principal (Hero) -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Bienvenidos a Hidráulica de Sinaloa</h1>
+            <p>Soluciones hidráulicas profesionales y personalizadas para tu industria.</p>
+            <a href="contacto.html" class="btn-primary">Contáctanos</a>
+        </div>
+    </header>
+
+    <!-- Sección Servicios -->
+    <section class="servicios">
+        <div class="service-card">
+            <h3>Servicios Especializados</h3>
+            <p>Soluciones hidráulicas diseñadas a medida para cada cliente, con calidad y rapidez.</p>
+            <a href="servicios.html" class="btn-secondary">Ver Servicios</a>
+        </div>
+        <div class="service-card">
+            <h3>Refacciones y Mantenimiento</h3>
+            <p>Refacciones originales y mantenimiento preventivo para asegurar la eficiencia de tus sistemas.</p>
+            <a href="refacciones.html" class="btn-secondary">Ver Refacciones</a>
+        </div>
+    </section>
+    
+    <!-- Sobre Nosotros -->
+    <section class="about">
+        <h2>¿Quiénes somos?</h2>
+        <p>Somos expertos en soluciones hidráulicas, con más de 10 años de experiencia en la industria.</p>
+        <a href="nosotros.html" class="btn-primary">Conoce más</a>
+    </section>
+
+    <footer>
+        <p>© 2025 Hidráulica de Sinaloa. Todos los derechos reservados.</p>
+    </footer>
+
     <script>
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             const menuToggle = document.querySelector('.menu-toggle');
-            navLinks.classList.toggle('active'); // Mostrar u ocultar los enlaces
-            menuToggle.classList.toggle('active'); // Activar la animación de las barras
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
         }
+
+        // Cierra el menú cuando se hace clic en un enlace (opcional pero útil en móvil)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+                document.querySelector('.menu-toggle').classList.remove('active');
+            });
+        });
     </script>
 </body>
 </html>
