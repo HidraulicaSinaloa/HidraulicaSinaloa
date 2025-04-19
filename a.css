@@ -133,6 +133,11 @@ nav {
         justify-content: flex-start; /* Alinea el logo a la izquierda */
     }
 
+    /* Cambiamos el tamaño del logo en pantallas pequeñas */
+    .logo-container img {
+        height: 40px; /* Reducimos el tamaño del logo */
+    }
+
     .nav-links {
         margin-left: 20px; /* Asegura que el menú no quede pegado al logo */
     }
