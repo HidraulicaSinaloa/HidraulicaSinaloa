@@ -336,3 +336,75 @@ footer {
         font-size: 18px;
     }
 }
+/* Estilos para el formulario de contacto */
+.contact-form-container {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Limitar el ancho para que no se desborde */
+    margin-bottom: 40px;
+}
+
+.contact-form h2 {
+    color: #b41e1e;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: #b41e1e; /* Color de borde al hacer foco */
+    background-color: #fff; /* Cambia el fondo cuando tiene foco */
+}
+
+.contact-form button {
+    background-color: #b41e1e;
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Hace que el botón ocupe todo el ancho */
+    max-width: 300px; /* Limita el tamaño máximo del botón */
+    margin: 0 auto; /* Centra el botón */
+}
+
+.contact-form button:hover {
+    background-color: #8e1616;
+}
+
+/* Para dispositivos móviles */
+@media (max-width: 768px) {
+    .contact-form input, .contact-form textarea {
+        padding: 10px; /* Ajusta el padding para pantallas más pequeñas */
+    }
+
+    .contact-form button {
+        padding: 12px 20px;
+        font-size: 16px; /* Ajusta el tamaño de la fuente */
+    }
+}
