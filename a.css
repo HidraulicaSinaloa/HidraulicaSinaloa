@@ -96,6 +96,13 @@ nav {
 
 /* Menú desplegable en dispositivos móviles */
 @media (max-width: 768px) {
+    /* Alineamos los elementos en el nav (logo y menú) para que estén en la misma fila */
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 20px; /* Menos espacio en los laterales en móvil */
+    }
+
     .nav-links {
         overflow: hidden;
         max-height: 0;
@@ -117,6 +124,17 @@ nav {
 
     .menu-toggle {
         display: flex;
+    }
+
+    /* Ajustamos el contenedor de logo y menú hamburguesa para dispositivos móviles */
+    .logo-container {
+        flex-grow: 1; /* Permite que el logo ocupe el espacio disponible */
+        display: flex;
+        justify-content: flex-start; /* Alinea el logo a la izquierda */
+    }
+
+    .nav-links {
+        margin-left: 20px; /* Asegura que el menú no quede pegado al logo */
     }
 }
 
