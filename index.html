@@ -30,6 +30,14 @@
         </ul>
     </nav>
 
+    <!-- Alerta de Notificación debajo del Navbar -->
+    <div id="notification" class="notification">
+        <div class="notification-content">
+            <p>¡Bienvenido a Hidráulica de Sinaloa! Si encuentras algún error o falla visual favor de comunicar al siguiente número: (667) 448-5507</p>
+            <button onclick="closeNotification()">Cerrar</button>
+        </div>
+    </div>
+
     <!-- Sección Principal (Hero) -->
     <header class="hero">
         <div class="hero-content">
@@ -79,6 +87,74 @@
                 document.querySelector('.menu-toggle').classList.remove('active');
             });
         });
+
+        // Cerrar notificación
+        function closeNotification() {
+            document.getElementById('notification').style.display = 'none';
+        }
     </script>
+
+    <style>
+        /* Estilos para la notificación */
+        .notification {
+            position: fixed;
+            top: 80px; /* Ajustamos para que aparezca debajo del navbar */
+            left: 0;
+            right: 0;
+            background-color: #b41e1e;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 16px;
+            z-index: 1000;
+        }
+
+        .notification button {
+            background-color: #8e1616;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .notification button:hover {
+            background-color: #b41e1e;
+        }
+
+        .notification-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .notification-content p {
+            margin-right: 20px; /* Deja un poco de espacio entre el texto y el botón */
+        }
+
+        /* Adaptaciones para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .notification {
+                padding: 10px;  /* Reducir el padding en móviles */
+                font-size: 14px;  /* Reducir el tamaño del texto */
+            }
+
+            .notification button {
+                padding: 8px 16px;  /* Reducir el tamaño del botón */
+                font-size: 12px;  /* Reducir el tamaño del texto en el botón */
+            }
+
+            .notification-content {
+                flex-direction: column; /* Asegura que el texto y el botón estén alineados verticalmente */
+            }
+
+            .notification-content p {
+                margin-right: 0;
+                margin-bottom: 10px; /* Da espacio entre el texto y el botón */
+            }
+        }
+    </style>
 </body>
 </html>
